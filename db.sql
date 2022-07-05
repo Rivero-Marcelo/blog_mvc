@@ -2,8 +2,8 @@ CREATE TABLE usuario(
     id int primary key auto_increment,
     username varchar(50) unique,
     password varchar(255),
-    nombre varchar(25),
-    apellido varchar(25)
+    nombreAutor varchar(25),
+    apellidoAutor varchar(25)
 );
 
 

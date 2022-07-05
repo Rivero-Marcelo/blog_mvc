@@ -6,6 +6,8 @@ require "../utils/autoload.php";
         public $Id;
         public $Nombre;
         public $Password;
+        public $NombreAutor;
+        public $ApellidoAutor;
         
 
         public function __construct($id=""){
@@ -22,9 +24,11 @@ require "../utils/autoload.php";
         }
 
         private function insertar(){
-            $sql = "INSERT INTO usuario (username,password) VALUES (
+            $sql = "INSERT INTO usuario (username,password,nombreAutor,apellidoAutor) VALUES (
             '" . $this -> Nombre . "',
-            '" . $this -> hashearPassword($this -> Password) . "')";
+            '" . $this -> hashearPassword($this -> Password) . "',
+            '" . $this -> NombreAutor . "',
+            '" . $this -> ApellidoAutor . "')";
 
             $this -> conexionBaseDeDatos -> query($sql);
         }
@@ -36,7 +40,9 @@ require "../utils/autoload.php";
         private function actualizar(){
             $sql = "UPDATE usuario SET
             username = '" . $this -> Nombre . "',
-            password = '" . $this -> Password . "'
+            password = '" . $this -> Password . "',
+            nombreAutor = '" . $this -> NombreAutor . "',
+            apellidoAutor = '" . $this -> ApellidoAutor . "'
             WHERE id = " . $this -> id;
             $this -> conexionBaseDeDatos -> query($sql);
         }
