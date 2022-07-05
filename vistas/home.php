@@ -16,8 +16,14 @@
 <h2>PUBLICACIONES</h2>
 <br><br>
 
+<?php foreach(($publicaciones=PublicacionControlador::ListarTodos()) as $publicacion) :?>
+
+    <b>AUTOR:</b> <?=  $publicacion['nombreAutor'] . " " . $publicacion['apellidoAutor'] ?><br>
+    <B>PUBLICADO:</B> <?=  $publicacion['fechaHora'] ?><br><br>
 
 
+
+<?php endforeach; ?>
 
 </body>
 </html>
