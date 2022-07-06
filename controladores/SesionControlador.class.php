@@ -11,12 +11,12 @@
                 SessionCreate("nombreUsuario", $u -> Nombre);
                 header("Location: /home");
 
-            }else render("login",["error" => true]);
+            }else render("home",["error" => true]);
         }
 
         public static function CerrarSesion($context){
             session_destroy();
-            header("Location:/login");
+            header("Location:/home");
         }
 
        

@@ -13,13 +13,13 @@
 
 <form action="/nuevaPublicacion" method="post">
 
-<b>Autor:</b><br>
-<b>Fecha de Publicación:</b><br><br><br>
+<b>Creado por:</b> <?= $_SESSION['nombreUsuario'] ?> <br>
+<b>Fecha:</b> <?= date('Y-m-d') ?> <br><br><br>
 
-<textarea name="cuerpo" rows="20" cols="50"></textarea>
+<textarea name="cuerpo" rows="20" cols="50"></textarea><br><br>
 
 
-
+<input type="submit" value="Publicar">
 
 </form>
 

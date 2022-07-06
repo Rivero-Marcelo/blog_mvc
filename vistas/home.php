@@ -36,8 +36,8 @@ Usuario  <input type="text" name="usuario"> Password
 
 <?php foreach(($publicaciones=PublicacionControlador::ListarTodos()) as $publicacion) :?>
 
-    <b>AUTOR:</b> <?=  $publicacion['nombreAutor'] . " " . $publicacion['apellidoAutor'] ?>
-    <B> PUBLICADO:</B> <?=  $publicacion['fechaHora'] ?><br><br>
+    <b>Autor:</b> <?=  $publicacion['nombreAutor'] . " " . $publicacion['apellidoAutor'] ?>
+    <B> Publicado:</B> <?=  $publicacion['fechaHora'] ?><br><br>
 
 
 

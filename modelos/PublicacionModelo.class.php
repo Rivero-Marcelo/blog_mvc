@@ -50,7 +50,7 @@ class PublicacionModelo extends Modelo{
             '" . $this -> fechaHora . "',
             '" . $this -> cuerpo . "')";
 
-            $this -> conexion -> query($sql);
+            $this -> conexionBaseDeDatos -> query($sql);
 
     }
 

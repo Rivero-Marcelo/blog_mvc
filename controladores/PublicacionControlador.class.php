@@ -8,15 +8,14 @@ class PublicacionControlador{
     public static function Nueva($contexto){
 
         $p = new PublicacionModelo();
-        $p -> idAutor = $contexto['session'][''];
+        $p -> idAutor = self::ObtenerIdparaAutor($nombre = $contexto['session']['nombreUsuario']);
         $p -> fechaHora = date('Y-m-d H:i:s');
-        $p -> cuerpo; 
+        $p -> cuerpo = $contexto['post']['cuerpo']; 
+        $p -> Guardar();
 
     }
 
 
-
-    
     
     
     public static function ListarTodos(){
@@ -26,9 +25,22 @@ class PublicacionControlador{
 
     }
 
+    public static function ObtenerIdparaAutor($nombre){
+
+        $p = new UsuarioModelo();
+        $p -> ObtenerPorNombre($nombre);
+        return $p -> Id;
+
+    }
+
+
+
+
 
 
  
+
+
 
 
 }

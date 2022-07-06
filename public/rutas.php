@@ -11,6 +11,7 @@
     Routes::Add("/nuevoUsuario", 'post', "UsuarioControlador::Alta");
 
     Routes::AddView("/nuevaPublicacion", "nuevaPublicacion");
+    Routes::Add("/nuevaPublicacion", 'post', "PublicacionControlador::Nueva");
 
 
     
