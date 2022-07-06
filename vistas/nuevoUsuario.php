@@ -17,6 +17,9 @@
         <input type="submit" value="Crear Usuario">
 
 </form>
+
+<br><br><br>
+<a href="/home">Volver</a>
     
 </body>
 </html>

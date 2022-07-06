@@ -14,14 +14,17 @@
 <form action="/nuevaPublicacion" method="post">
 
 <b>Autor:</b><br>
-<b>Fecha de Publicación:</b><br>
+<b>Fecha de Publicación:</b><br><br><br>
+
+<textarea name="cuerpo" rows="20" cols="50"></textarea>
 
 
 
 
 </form>
 
-
+<br><br><br><br>
+<a href="/home">Volver</a>
 
 
     

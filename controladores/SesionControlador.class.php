@@ -9,10 +9,9 @@
             if($u -> Autenticar($u -> Nombre, $u -> Password)){
                 SessionCreate("autenticado",true);
                 SessionCreate("nombreUsuario", $u -> Nombre);
-                header("Location: /");
+                header("Location: /home");
 
-            }
-            render("login",["error" => true]);
+            }else render("login",["error" => true]);
         }
 
         public static function CerrarSesion($context){

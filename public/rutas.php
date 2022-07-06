@@ -1,10 +1,11 @@
 <?php 
     require "../utils/autoload.php";
 
-    Routes::AddView("/login","login");
-    Routes::Add("/login","post","SesionControlador::IniciarSesion");
+   // Routes::AddView("/login","login");
+   // Routes::Add("/login","post","SesionControlador::IniciarSesion");
 
     Routes::AddView("/home", "home");
+    Routes::Add("/home", 'post', "SesionControlador::IniciarSesion");
 
     Routes::AddView("/nuevoUsuario", "nuevoUsuario");
     Routes::Add("/nuevoUsuario", 'post', "UsuarioControlador::Alta");
