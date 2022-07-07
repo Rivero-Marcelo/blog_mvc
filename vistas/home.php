@@ -20,7 +20,13 @@ if(isset($_SESSION['autenticado'])){
 <div><form <?=  $oculto ?>  action="/home" method="post">
 Usuario  <input type="text" name="usuario"> Password 
 <input type="password" name="password">  
-<input type="submit" value="Iniciar Sesión"></form><br></div>
+<input type="submit" value="Iniciar Sesión"></form><br>
+ 
+<?php if(isset($parametros['error']) && $parametros['error'] === true ) :?>
+        <div style="color: red;">Credenciales invalidas.</div>
+    <?php endif;?><br>
+
+    </div>
 
 <div <?= $oculto ?> ><a href="/nuevoUsuario"> Registrarse</a> </div>
 

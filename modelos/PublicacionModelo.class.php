@@ -36,7 +36,7 @@ class PublicacionModelo extends Modelo{
 
     public function Guardar(){
 
-        if($this -> idPublicacion == NULL) $this -> insertar();
+        if($this -> idPublicacion == NULL) return $this -> insertar();
         else $this -> actualizar();
 
 
@@ -50,7 +50,9 @@ class PublicacionModelo extends Modelo{
             '" . $this -> fechaHora . "',
             '" . $this -> cuerpo . "')";
 
-            $this -> conexionBaseDeDatos -> query($sql);
+         if($this -> conexionBaseDeDatos -> query($sql)){
+            return true;
+         }else return false;
 
     }
 

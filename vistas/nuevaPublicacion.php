@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION['autenticado']))
+header("Location: /home");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +29,13 @@
 
 </form>
 
-<br><br><br><br>
+<br><br>
+<?php if(isset($parametros['error']) && $parametros['error'] === false ) :?>
+        <div style="color: red;">Publicación exitosa.</div>
+    <?php endif;?><br>
+    
+    <br>
+
 <a href="/home">Volver</a>
 
 

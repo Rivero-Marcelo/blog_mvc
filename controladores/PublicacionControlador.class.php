@@ -11,8 +11,10 @@ class PublicacionControlador{
         $p -> idAutor = self::ObtenerIdparaAutor($nombre = $contexto['session']['nombreUsuario']);
         $p -> fechaHora = date('Y-m-d H:i:s');
         $p -> cuerpo = $contexto['post']['cuerpo']; 
-        $p -> Guardar();
-
+       
+        if($p -> Guardar()){
+            render("nuevaPublicacion",["error" => false]);
+        }else  echo "ERROR AL PUBLICAR";
     }
 
 
